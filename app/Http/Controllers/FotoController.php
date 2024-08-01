@@ -19,7 +19,9 @@ class FotoController extends Controller
      */
     public function create()
     {
-        //
+        $albums = Album::all();
+
+        return view("foto.create")->with("albums", $albums);
     }
 
     /**
